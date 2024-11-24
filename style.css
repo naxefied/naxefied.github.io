@@ -1,21 +1,5 @@
 :root {
     --font-family: 'Montserrat', sans-serif;
-    --bg-color: #ffffff;
-    --text-color: #121212;
-    --accent-color: #9C4DFF;
-    --accent-light: #D1C4E9;
-    --button-bg: #F3E5F5;
-    --button-text: #9C4DFF;
-    --button-hover-bg: #9C4DFF;
-    --button-hover-text: #ffffff;
-    --header-bg: var(--accent-color);
-    --header-color: white;
-    --footer-bg: #121212;
-    --footer-color: white;
-    --transition-speed: 0.3s;
-}
-
-[data-theme="dark"] {
     --bg-color: #121212;
     --text-color: #ffffff;
     --accent-color: #D1C4E9;
@@ -30,19 +14,6 @@
     --footer-color: #D1C4E9;
 }
 
-.theme-icon {
-    transition: opacity 0.3s ease, filter 0.3s ease;
-    position: absolute;
-}
-
-.theme-icon.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-[data-theme="dark"] .theme-icon {
-    filter: invert(1);
-}
 
 body {
     font-family: var(--font-family);
@@ -107,21 +78,6 @@ button#theme-toggle img.hidden {
     width: 40px;
     height: 40px;
     object-fit: contain;
-}
-
-.theme-icon {
-    transition: opacity 0.3s ease, filter 0.3s ease;
-    position: absolute;
-}
-
-.theme-icon.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-button#theme-toggle img {
-    width: 30px;
-    height: 30px;
 }
 
 main {
