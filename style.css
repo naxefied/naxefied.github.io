@@ -58,16 +58,14 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
     background-color: var(--header-bg);
     color: var(--header-color);
-    padding: 20px 10px;
-    text-align: center;
     transition: background-color var(--transition-speed), color var(--transition-speed);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    position: relative;
 }
 
 button#theme-toggle {
@@ -75,24 +73,31 @@ button#theme-toggle {
     background: none;
     cursor: pointer;
     padding: 10px;
-    position: fixed;
-    top: 27px;
-    left: 100px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1000;
-    transition: top 0.3s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    flex-grow: 1;
+    text-align: center;
 }
 
 button#theme-toggle img {
     width: 30px;
     height: 30px;
     transition: opacity 0.3s ease, filter 0.3s ease;
-    position: absolute;
 }
 
 button#theme-toggle img.hidden {
     opacity: 0;
     pointer-events: none;
 }
+
 
 [data-theme="dark"] .theme-icon {
     filter: invert(1);
