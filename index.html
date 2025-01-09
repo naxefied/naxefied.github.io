@@ -21,7 +21,28 @@
     
             <h3>let's dive in, shall we?</h3>
     
-            <p>hey! i’m <strong>pavel</strong>, but online i go by <strong>naxe</strong>, in case you haven't realized. i’m 16 and live in <b>tambov</b>, <b>russia</b>. right now, i’m just studying, but music is a huge part of my life. i’m also really into <b>tech</b> and <b>IT</b> - those things get me inspired and open up so many possibilities. always down to chat and meet new people!</p>
+            <p id="1">hey! i’m <b>pavel</b>, but online i go by <b>naxe</b>, in case you haven't realized. i’m 16 and live in <b>tambov</b>, <b>russia</b>. right now, i’m just studying, but music is a huge part of my life. i’m also really into <b>tech</b> and <b>IT</b> - those things get me inspired and open up so many possibilities. always down to chat and meet new people!</p>
+    <script>
+        const birthDate = new Date('2008-01-22T00:00:00+03:00');
+        const pElement = document.getElementById('1');
+
+        function updateTimer() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            const nextBirthday = new Date(currentYear, birthDate.getMonth(), birthDate.getDate());
+            const age = currentYear - birthDate.getFullYear();
+
+            if (now > nextBirthday) nextBirthday.setFullYear(currentYear + 1);
+            const daysRemaining = Math.ceil((nextBirthday - now) / (1000 * 60 * 60 * 24));
+
+            pElement.innerHTML = daysRemaining > 0 
+                ? `hey! i’m <b>pavel</b>, but online i go by <b>naxe</b>, in case you haven't realized. ${daysRemaining} days until i’m ${age} and live in <b>tambov</b>, <b>russia</b>. right now, i’m just studying, but music is a huge part of my life. i’m also really into <b>tech</b> and <b>IT</b> - those things get me inspired and open up so many possibilities. always down to chat and meet new people!`
+                : `hey! i’m <b>pavel</b>, but online i go by <b>naxe</b>, in case you haven't realized. i’m ${age + 1} and live in <b>tambov</b>, <b>russia</b>. right now, i’m just studying, but music is a huge part of my life. i’m also really into <b>tech</b> and <b>IT</b> - those things get me inspired and open up so many possibilities. always down to chat and meet new people!`;
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    </script>
 
 
             <p><strong>pronouns:</strong> <span class="highlight-pronouns">He/Him</span></p>
