@@ -3,56 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>whos that fucling naxe</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="me" href="https://mastodon.ml/@naxewore">
+    <title>Накси</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+        :root {
+            --font-family: 'Montserrat', sans-serif;
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --accent-color: #E57373;
+            --accent-light: #D32F2F;
+            --button-bg: #333333;
+            --button-text: #E57373;
+            --button-hover-bg: #E57373;
+            --button-hover-text: #121212;
+            --header-bg: var(--accent-light);
+            --header-color: #121212;
+            --footer-bg: #333333;
+            --footer-color: #E57373;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: var(--font-family);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .header {
+            width: 100%;
+            background-color: var(--header-bg);
+            color: var(--header-color);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            text-align: center;
+            width: 80%;
+            word-wrap: break-word;
+            white-space: normal;
+            max-width: 90%;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--footer-bg);
+            color: var(--footer-color);
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: var(--footer-color);
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>naxefied.</h1>
-    </header>
-
-    <main>
-        <section>
-            <h2>about me</h2>
-            <p><b>hey there pal!</b> time to let you in on a little secret about yours truly – now that you've stumbled upon this corner of the internet <b>:]</b> </p>
+    <div class="header">Накси</div>
+    <div class="content">Скоро здесь<br>что-то будет</div>
     
-            <h3>let's dive in, shall we?</h3>
-    
-            <p>hey! i’m <b>pavel</b>, but online i go by <b>naxe</b>, in case you haven't realized. i’m 17 and i live in <b>tambov</b>, <b>russia</b>. right now, i’m just studying, but music is a huge part of my life. i’m also really into <b>tech</b> and <b>IT</b> - those things get me inspired and open up so many possibilities. always down to chat and meet new people!</p>
-
-
-            <p><strong>pronouns:</strong> <span class="highlight-pronouns">He/Him</span></p>
-            <p><strong>mbti:</strong> <span class="highlight-mbti">ISTP-T</span></p>
-            <p><strong>languages:</strong> <span class="highlight-languages">Russian, English</span></p>
-
-            
-        </section>
-
-        <section>
-            <h3>some buttons:</h3>
-            <div class="social-buttons">
-                <a href="http://crymadkid.t.me/" class="btn">
-                    <img src="icons/telegram.svg" alt="Telegram" class="social-icon telegram">
-                </a>
-                <a href="mailto:me@naxefied.ru" class="btn">
-                    <img src="icons/mail.svg" alt="E-Mail" class="social-icon mail">
-                </a>
-                <a href="https://github.com/naxefied" class="btn">
-                    <img src="icons/github.svg" alt="GitHub" class="social-icon github">
-                </a>
-                <a href="https://mastodon.ml/@naxewore" class="btn">
-                    <img src="icons/mastodon.svg" alt="Mastodon" class="social-icon mastodon">
-                </a>
-                <a href="https://www.last.fm/user/naxefied" class="btn">
-                    <img src="icons/lastfm.svg" alt="Last.fm" class="social-icon lastfm">
-                </a>
-            </div>
-        </section>
-    </main>
-
     <footer>
         <p><a href="https://github.com/naxefied/naxefied.github.io" target="_blank">this site on github</a></p>
         <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">❤️</a></p>
